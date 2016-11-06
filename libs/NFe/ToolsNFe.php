@@ -1924,6 +1924,7 @@ class ToolsNFe extends BaseTools
             return false;
         }
         if (! ValidXsd::validar($aResp['xml'], $xsdPath)) {
+	    $this->errors = array();	
             $this->errors[] = ValidXsd::$errors;
             return false;
         }
